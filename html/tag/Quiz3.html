@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    고객명 : <input type="text">
+    <br>
+    <br>
+    <label>전화번호 : <input type="tel"> </label>
+    <br>
+    <br>
+    <label for="input_email">E-mail :</label> <input type="email" id="input_email">
+    <br>
+    <br>
+    피자선택 : 
+    <select>
+            <option selected>피자를 선택하세요</option>
+            <option>페페로니</option>
+            <option>고구마피자</option>
+            </optgroup>
+    </select>
+
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <label><input type="radio">Samll</label>
+        <br>
+        <br>
+        <label><input type="radio">Medium</label>
+        <br>
+        <br>
+        <label><input type="radio">Large</label>
+    </fieldset>
+
+    <fieldset>
+        <legend>토핑 선택</legend>
+        <label><input type="checkbox" name ="level">베이컨</label>
+        <br>
+        <br>
+        <label><input type="checkbox" name ="level">치즈</label>
+        <br>
+        <br>
+        <label><input type="checkbox" name ="level">양파</label>
+        <br>
+        <br>
+        <label><input type="checkbox" name ="level">버섯</label>
+    </fieldset>
+    희망배송시간 : <input type="time">
+    <br>
+    <br>
+    배송시 요청사항 : <textarea readonly></textarea>
+</form>
+</body>
+</html>
