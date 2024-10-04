@@ -14,7 +14,7 @@
         }
 
         /* 자식 선택자 */
-        .top-div > p {
+        .top-div>p {
             color: blue;
         }
 
@@ -29,19 +29,19 @@
         } */
 
         /* 일반 형제 선택자 */
-        p ~ span {
+        p~span {
             color: orange;
         }
 
         /*가상 요소 선택자 */
         #vr-p::before {
-            content:"*";
-            color:aqua;
+            content: "*";
+            color: aqua;
         }
 
         #vr-p::after {
-            content:"...";
-            color:gold;
+            content: "...";
+            color: gold;
         }
 
         /* 가상 클래스 선택자 */
@@ -68,17 +68,17 @@
         input:disabled {
             color: darkred;
         }
-        
+
         /*
         input[type="checkbox"]:checked {
 
         }
         */
-/*입력 요소 가상 클래스 선택자
+        /*입력 요소 가상 클래스 선택자
 */
 
-        .chk-test:checked + span {
-            background-color:red;
+        .chk-test:checked+span {
+            background-color: red;
         }
     </style>
 
