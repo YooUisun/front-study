@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .top-div {
+            background-color: lightgray;
+        }
+
+    * {
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+    }
+
+    .box {
+        width: 100px;
+        height: 100px;
+
+    }
+    .container{ 
+        border: 5px solid black;
+        margin: 50px;
+        width: 500px;
+    }
+
+        .red-box { background-color: red;}
+        .green-box { 
+            background-color: green;
+            position: relative;
+            left: 50px;
+            top:-50px;
+            z-index: 1;
+        }
+        .yellow-box {
+            background-color: yellow;
+            position: relative;
+            top: -100px;
+        }
+
+</style>
+</head>
+<body>
+
+    <div class="top-div">
+        <h3>배경색이 lightgray</h3>
+        <h3>h3글자</h3>
+    </div>
+
+    <div class="container">
+    <div class="box red-box">A</div>
+    <div class="box green-box">B</div>
+    <div class="box yellow-box">C</div>
+    </div>
+
+
+</body>
+</html>
