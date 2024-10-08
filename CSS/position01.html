@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+            position : 위치 조정 (배치)
+                statoc : 기존 흐름 (기본값)
+                relative : 흐름대로 + 위치조정 (원래 자기가 있어야할 위치 기준으로 움직임)
+                Absolute : 흐름무시 + 절대좌표 위치조정 <<화면에 보이는것 처럼 움직임
+                            (위치 조정이 가능한 부모요소의 시작지점 기준임)
+                                부모요소 static : x
+                                부모요소 relative : o
+                Fixed : 흐름무시 + 절대좌표 위치
+                sticky : 흐름대로 + 특정위치에 가면 fixed처럼 고정이 된다.
+                *위치조정
+                Left right top bottom
+                Z-index <<숫자가 클 수록 앞으로 나옴
+
+                
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box; << 웹페이지 제작할때 기본값. 옆에 여백을 가려버림.
+            opacity: 0.5; /*불투명도 조정 */
+
+            */
+
+            .box {
+                width:200px;
+                height:200px;
+            }
+            
+            .red-box {
+                background-color: red;
+                position: relative;
+                left: 100px;
+            }
+            
+            .green-box {
+                background-color: green;
+                position: static;
+
+            }
+            
+            .blue-box {
+                background-color: blue;
+                position: relative;
+                top: -50px;
+
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="box red-box"></div>
+    <div class="box green-box"></div>
+    <div class="box blue-box"></div>
+</body>
+</html>
