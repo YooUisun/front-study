@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+
+        .red-box {
+            background-color: red;
+            float: left;
+        }
+
+        .green-box {
+            background-color: green;
+            float: left;
+
+        }
+
+        .blue-box {
+            background-color: blue;
+            float: left;
+        }
+
+        .next {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+
+        .black-box {
+            border: 2px dashed black;
+            display: inline-block;
+        }
+
+        .clear-box {
+            clear:left;
+            background-color: lightblue;
+        }
+        .container::after {
+            content: ""; /*content 가 없으면 동작x*/
+            display: block; /* 기본 content 단순 텍스트 inline */
+            clear: both; /*앞에 clear가 left면 다음에도 left쓰고, 만약 둘 다 있다면 both 써주기 */
+        }
+    </style>
+</head>
+
+<body>
+    <!--박스를 이어서 붙이고 싶다면 이런식으로 끝나는 div와 시작하는div를 붙여줘야함-->
+    <div class="box black-box">
+    </div><div class="box black-box">
+    </div><div class="box black-box">
+    </div>
+
+
+    <div class="container">
+        <div class="box red-box"></div>
+        <div class="box green-box"></div>
+        <div class="box blue-box"></div>
+        <!--<div class="box clear-box"></div>-->
+    </div>
+
+    <div class="next"></div>
+
+    <!--float 로 공간인식이 안될때
+    1. 임의의 크기 인식되는 요소를 추가
+    2. clear
+        1)마지막 요소 clear
+        2)가상요소 선택자 clear
+    -->
+</body>
+
+</html>
