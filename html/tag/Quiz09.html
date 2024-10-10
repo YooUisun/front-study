@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+/* 아래에 container .box .img {} 를 해버리면 
+컨테이너 안,박스 안, 에 있는 정확한 이미지를 갖고오는 거 라서 더 정확하고 많이 쓰임*/
+
+        .container {                
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .box {
+            background-color: lightgray;
+            border: 1px solid black;
+            width: 300px;
+            float: left;
+        }
+
+        .box-img {
+            width: 150px;
+            float: left;
+        }
+
+        .container ::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img src="../images/다운로드.jpg" class="box-img"> <!--class 쓰는건 정확하게 그 이미지를 갖고올때-->
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, ad. Tempore accusamus voluptas aliquam
+                laboriosam unde saepe voluptatum! Fugiat unde necessitatibus velit pariatur modi possimus temporibus
+                molestias numquam eligendi fuga.</p>
+        </div>
+    
+        <div class="box">
+            <img src="../images/다운로드.jpg" class="box-img">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, ad. Tempore accusamus voluptas aliquam
+                laboriosam unde saepe voluptatum! Fugiat unde necessitatibus velit pariatur modi possimus temporibus
+                molestias numquam eligendi fuga.</p>
+        </div>
+    </div>
+</body>
+</html>
