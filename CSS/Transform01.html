@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 돌려보기 X축Y축 */
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /* transform: translate(50px,100px); << 왼쪽 50px 아래로 100px 이동*/
+            /* transform: scale(0.5, 0.5); */
+            /* transform: skewY(45deg); */
+            transform: rotate(45deg) translateY(100px); /*roate,translateY랑 같음 덮어쓰기 되는거임*/
+            transform-origin: right bottom;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="box"></div>
+</body>
+</html>
