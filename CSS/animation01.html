@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 애니메이션 기본 폼 
+    애니메이션은 기본적으로 3가지가 충족해야 가능함 ,name,duration,속성 -->
+
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+
+            animation-name: box-ani2;
+            animation-duration: 5s;
+            animation-delay: 2s;
+            animation-fill-mode: both;
+            /* fill-mode forwards 는 끝난 상태로 대기  */
+            /* backwards 는 다시 돌아감 */
+            /* both는 애니메이션이의 앞 뒤 결과를 조합하여 설정 */
+            animation-iteration-count: infinite;
+            /* interation-count는 반복횟수 infinite는 무한*/
+            animation-play-state: running;
+            /* running과pause가 있음 */
+
+            /* animation-direction: alternate; */
+            /* alternate는 끝 까지 진행 했다가 다시 그대로 되돌아옴 */
+            
+            /* animation-timing-function: cubic-bezier(); */
+        }
+
+        .box:hover {
+            animation-play-state: paused;
+        } 
+        /* box hover 에다가 저렇게 paused를 주면 마우스를 갖다대면 멈춤. */
+        @keyframes box-ani {
+            0% {
+                background-color: red;
+                width: 200px;
+            }
+
+            50% {
+                background-color: green;
+                width: 300px;
+            }
+
+            100% {
+                background-color: blue;
+                width: 500px;
+            }
+        }
+
+        @keyframes box-ani2 {
+            0% {
+                background-color: red;
+                width: 200px;
+            }
+
+            25% {
+                background-color: green;
+                width: 300px;
+            }
+
+            50% {
+                background-color: blue;
+                width: 500px;
+            }
+            75% {
+                background-color: green;
+                width: 200px;
+            }
+            100% {
+                background-color: red;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
