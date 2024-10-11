@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 700px;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+        }
+
+        .nav div {
+            background-color: red;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+
+        }
+
+        .main {
+            display: flex;
+            height: 300px;
+
+        }
+
+        .content {
+            width: 70%;
+            background-color: orange;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: black;
+            transition-property: all;
+            transition-duration: 1s;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box:hover {
+            transform: scale(1.5)
+        }
+
+        .aside {
+            width: 30%;
+            background-color: green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .footer {
+            height: 100px;
+            background-color: blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div>메인메뉴</div>
+            <div>마이페이지</div>
+        </div>
+        <div class="main">
+            <div class="content">
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+                <div class="box"></div>
+            </div>
+            <div class="aside">aisde</div>
+        </div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+
+</html>
