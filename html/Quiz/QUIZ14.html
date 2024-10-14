@@ -1,0 +1,217 @@
+<!-- 아쿠아리움 레이아웃 따보기 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* 헤더 스타일 */
+        
+        .main-header {
+            width: 100%;
+            background-color: #fff;
+            border-bottom: 5px solid #ddd;
+        }
+        .top-menu {
+            background-color: gray;
+            padding: 10px 17px;
+            text-align: left;
+        }
+        .top-menu ul li {
+            display: inline-block;
+            margin:0 15px;
+        }
+
+        .top-menu ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            margin-left: 30px;
+
+        }
+
+        .main-nav ul li {
+            margin-left: 100px;
+        }
+
+        .main-nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .main-nav ul li a:hover {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+        }
+
+        /* 메인 비주얼 스타일 */
+        .main-visual {
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+        }
+
+        .visual-text h3 {
+            font-size: 48px;
+            margin-bottom: 50px;
+            font-family:fantasy;
+        }
+
+        .visual-text p {
+            font-size: 24px;
+            margin-bottom: 100px;
+            color: rgba(29, 5, 247, 0.589);
+            font-family: fantasy;
+        }
+        p3 {
+            color: rgb(4, 33, 128);
+            font-size: 15px;
+        }
+        .button {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #003366;
+        }
+
+        /* 주요 콘텐츠 스타일 */
+        .main-content {
+            padding: 50px 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        .content-box {
+            margin-bottom: 30px;
+        }
+
+        .content-box h2 {
+            font-size: 32px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* 푸터 스타일 */
+        .main-footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .main-footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 맨 위에 -->
+    <div class="container">
+        <header class="main-header">
+            <div class="top-menu">
+                <ul>
+                    <li><a href="https://adventure.lotteworld.com/kor/main/index.do">롯데월드 어드벤처</a></li>
+                    <li><a href="https://adventurebusan.lotteworld.com/kor/main/index.do">롯데월드 어드벤처 부산</a></li>
+                    <li><a href="https://seoulsky.lotteworld.com/ko/main/index.do">SEOUL SKY</a></li>
+                    <li><a href="https://www.lotteworld.com/waterpark/index.asp">롯데워터파크</a></li>
+                    <li><a href="https://lotteworld.vn/">롯대월드 아쿠아리움 하노이</a></li>
+                </ul>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="https://www.lotteworld.com/contents/contents.asp?cmsCd=CM0331">아쿠아리움 소개</a></li>
+                    <li><a href="https://www.lotteworld.com/app/aqa_program/list.asp?cmsCd=CM0332">프로그램·이벤트</a></li>
+                    <li><a href="https://www.lotteworld.com/app/aqa_openingHour/view.asp?cmsCd=CM0333">이용안내</a></li>
+                    <li><a href="https://mticket.lotteworld.com/web/pdt/productList.do?ei_gsber=1240&ei_bukrs=1200">온라인예매</a></li>
+                    <li><a href="https://www.lotteworld.com/contents/contents.asp?cmsCd=CM0335">단체 안내</a></li>
+                    <li><a href="https://www.lotteworld.com/faq/list.asp?cmsCd=CM0336">고객소리함</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 중앙 -->
+    <section class="main-visual">
+        <div class="visual-text">
+            <h3>휴먼교육센터 5기 풀스택과정</h3>
+            <p>신비로운 풀스택 과정을 소개합니다</p>
+            <br>
+            <a href="https://www.work24.go.kr/cm/main.do" class="button">자세히보기</a>
+            <br>
+            <br>
+            <p3>(클릭시 고용24로 들어갑니다.)</p3>
+        </div>
+
+    </section>
+
+    <!-- 푸터 위에-->
+    <section class="main-content">
+        <div class="container">
+            <div class="content-box">
+                <h2>휴먼교육센터</h2>
+                <p>휴먼교육센터 운영 시간: 10:00 ~ 22:00</p>
+            </div>
+            <div class="content-box">
+                <h2>주요 프로그램</h2>
+                <p>풀스택 과정</p>
+            </div>
+            <div class="content-box">
+                <h2>편의 시설</h2>
+                <p>달식당,카페···</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 푸터 -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>2024 휴먼교육센터5기</p>
+        </div>
+    </footer>
+</body>
+
+</html>

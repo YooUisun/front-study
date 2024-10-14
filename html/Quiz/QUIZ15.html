@@ -1,0 +1,52 @@
+<!-- 색깔 변하는 상자 옆으로 굴리기 그리고 되돌아오기 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            animation-name: box-ani;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            /* margin -left
+                position +left 
+                transform: translateX
+                3개 중에 한 개 쓰면 되는데 보통 transfrom: franslateX 많이 씀
+            */
+        }
+
+        @keyframes box-ani {
+            0% {
+                background-color: blue;
+                transform: translateX(0);
+                rotate(0deg);
+                /* left: 0px; transform을 쓰거나 이렇게 쓰거나 둘 다 가능*/
+            }
+
+            50% {
+                transform: translateX(200px) rotate(180deg);
+                background-color: orange;
+                /* left: 200px; transform을 쓰거나 이렇게 쓰거나 둘 다 가능*/
+            }
+
+            100% {
+                transform: translateX(400px) rotate(360deg);
+                background-color: pink;
+                /* left: 400px; transform을 쓰거나 이렇게 쓰거나 둘 다 가능*/
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>
