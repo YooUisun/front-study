@@ -1,0 +1,66 @@
+
+<!-- 2024-10-15 일 자바스크립트 수업내용 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>글자</p>
+    </div>
+
+    <div class="container">
+        <div class="box a" id="box-a-id">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+    </div>
+<!-- 여기서 text는 보이는 글자 hidden은 안 보이는 글자 -->
+    <p id="target">text<span style="display: none;">hidden</span></p>
+
+    <script>
+        // *자바 스크립트는 순서대로 실행되기 때문에 위에서 틀리면 아래것도 전부다 실행이 안됨.*
+        let cup = '콜라';
+        cup = '맥주';
+        cup = '오뎅국물';
+
+        //아래 const 대신 let 써도 되지만 const 쓰는게 좋음.
+        const boxA = document.getElementById('box-a-id');
+        
+        console.log(boxA); //콘솔창에 적용해 달라
+
+        document.getElementById('box-a-id');
+        // document.getElementById('#box-a-id'); 하면 안됨. # 이 문제임
+        document.getElementsByClassName('box');
+        document.querySelector('#box-a-id');
+        document.querySelectorAll('.container');
+        // document.querySelectorAll('container'); XX 는 이렇게 하면 안됨. 컨테이너 앞에 . 무조건 넣어야함
+
+        // consol.log 는 출력하는 명령어임 
+        // div 타켓에 있는 걸 보겠다 라는 말임
+        const div_target = document.getElementById('target');
+        console.log(div_target.textContent);
+        console.log(div_target.innerText);
+        console.log(div_target.innerHTML);
+
+        document.getElementById('target').textContent = 'textContent 작성';
+        document.getElementById('target').innerText = 'innerContent 작성';
+        document.getElementById('target').innerHTML = 'innerHTML 작성';
+        // 덮어쓰고 덮어쓰고 해서 결국엔 제일 아래에 있는얘가 최종적으로 나옴.
+
+        div_target.style.color = '#ab93f6';
+        // 색상 바꾸기
+
+        document.querySelector('#box-a-id').classList.add('bg-red');
+
+    </script>
+</body>
+</html>
