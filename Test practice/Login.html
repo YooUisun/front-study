@@ -25,6 +25,7 @@
         = 내부 요소를 가운데 정렬할때 */
         /* align-item 은 한 줄 일때 */
         /* align-content 는 두 줄 이상일때 */
+
         .header {
             width: 80%;
             height: 100px;
@@ -33,37 +34,40 @@
             justify-content: center;
             margin: 0 auto;
         }
-            .Signup {
-                background-color: rgba(16, 206, 16, 0.863);
-                width: 50%;
-                height: 30px;
-                display: flex;
-                align-content: center;
-                justify-content: center;
-                color: white;
-                margin-top: 20px;
-            }
 
-            .Login {
-                background-color: gray;
-                width: 50%;
-                height: 30px;
-                display: flex;
-                align-content: center;
-                justify-content: center;
-                color: white;
-                margin-top: 20px;
+        .Signup {
+            background-color: #808080;
+            width: 50%;
+            height: 30px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            color: #ffffff;
+            margin-top: 20px;
+        }
 
-            }
+        .Login {
+            background-color: #10ce10dc;
+            width: 50%;
+            height: 30px;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            color: #ffffff;
+            margin-top: 20px;
+
+        }
+
         .title {
             width: 100%;
             height: 40px;
             font-size: 2em;
-            color: white;
+            color: #ffffff;
             display: flex;
             align-content: center;
             justify-content: center;
         }
+
         /* .box {
             display: flex;
             align-content: center;
@@ -71,21 +75,36 @@
         } */
         form div {
             text-align: center;
+            margin-top: 50px;
+
         }
+
         form {
             text-align: center;
         }
+
         form input {
             width: 450px;
             height: 30px;
             margin: 25px;
-            background-color: rgb(13, 56, 13);
-            color: white;
+            background-color: #0d380d;
+            color: #ffffff;
+
         }
+
         .started {
+            display: inline-block;
+            /* 인라인 요소에 width와 height 적용 */
+            width: 250px;
             height: 50px;
-            background-color: green;
-            color: white;
+            background-color: #008000;
+            color: #ffffff;
+            text-align: center;
+            /* 텍스트 가운데 정렬 */
+            line-height: 50px;
+            /* 세로 정렬을 위해 line-height를 height와 동일하게 */
+            text-decoration: none;
+            /* 링크의 기본 밑줄 제거 */
         }
     </style>
 </head>
@@ -93,17 +112,16 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="Signup">sign up</div>
+            <a class="Signup" href="./Signup.html">Sign up</a>
             <div class="Login">Login</div>
         </div>
-        <div class="title">Sign Up for Free</div>
-            <form>
-                <div><input type="E-mail" placeholder="Email Address"></div>
-                <div><input type="password" placeholder="Set A password"></div>
-                <div><input type="E-mail" placeholder="Confirm A Password"></div>
-                <input class="started" type="button" value="GET STARTED">
-            </form>
-        </div>
+        <div class="title">Welcome Back!</div>
+        <form>
+            <div><input type="E-mail" placeholder="Email Address*"></div>
+            <div><input type="E-mail" placeholder="Password*"></div>
+            <a class="started" href="./Main.html">LOG IN</a>
+        </form>
+    </div>
     </div>
 
 </body>
