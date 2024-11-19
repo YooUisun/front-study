@@ -1,4 +1,4 @@
-//
+// 2024-11-18 
 
 function arrForEach( func ){
     let arr = [10, 20,30,40];
@@ -25,7 +25,6 @@ arrForEach( (a,b) => {
 const cb = ()=> {
     console.log('callback 함수');
 }
-
 cb();
 
 const outCallback = (cb)=> {
@@ -47,4 +46,13 @@ setTimeout(
 );
 //위에 코드는 1초 있다가 저 '함수실행' 을 해라 라는 뜻임.
 
-cb();
+//
+
+function fff(){
+    console.log(1);
+    console.log(2);
+    return;
+    console.log(3);
+
+}
+fff();

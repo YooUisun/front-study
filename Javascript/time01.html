@@ -1,0 +1,72 @@
+<!-- 2024-11-19 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width:100px;
+            height:100px;
+            background-color: darkgreen;
+            position:relative;
+            left:0px;
+        }
+    </style>
+</head>
+<body>
+    <p id="target"></p>
+
+    <div class="box"></div>
+
+    <p id="clock"></p>
+
+    <button onclick="clearItv()">박스움직임종료</button>
+    <script>
+
+        setTimeout(()=>{
+            console.log('3초 지남');
+            document.getElementById('target').textContent = '3초 지났음';
+        }, 3000);
+        
+        setTimeout(()=>{
+            document.getElementById('target').style.color = 'red';
+        }, 5000);
+
+
+        let boxMoveItv = setInterval(()=>{
+            const box = document.getElementsByClassName('box')[0];
+            //console.log(box.style.left);
+            if(box.style.left == '' || box.style.left == '600px'){
+                box.style.left = 50+ 'px';
+            } else {
+                let leftValue = box.style.left; // 50px
+                leftValue = leftValue.replace('px', '');
+
+                box.style.left = Number(leftValue) + 50 + 'px';
+                //50px 100 px 150px ------1초마다 왼쪽으로 움직임
+            }
+
+        }, 1000 );
+
+        let clockItv = setInterval(()=>{
+            const current = new Date();
+            //RPAD LPAD -> padStart padEnd 16:4:6
+            const time = 
+            String(current.getHours()).padStart(2, '0')
+            + ":" 
+            + String(current.getMinutes()).padStart(2, '0') 
+            + ":" 
+            + String(current.getSeconds()).padStart(2, '0');
+
+            document.getElementById('clock').textContent = time;
+        }, 1000);
+
+        function clearItv(){
+            clearInterval(boxMoveItv);
+        }
+    </script>
+</body>
+</html>

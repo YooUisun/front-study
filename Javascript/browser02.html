@@ -1,0 +1,32 @@
+<!-- 2024-11-19 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>browser02.html</h1>
+
+    <script>
+        // alert('alert창');
+        let r1 = confirm('confirm 창');
+        let r2 =prompt('prompt 창');
+
+        console.log(r1);
+        console.log(r2);
+
+        // window.open('https://netflix.com', '_blank');
+        // window.open('https://netflix.com', '_self');
+        window.open('https://netflix.com', 'netflix',
+            'width=600, height=500'
+        );          //팝업창 띄우는 방법
+
+        
+        window.open('popup.html', 'popup',
+            'width=400, height=300'
+        );
+    </script>
+</body>
+</html>

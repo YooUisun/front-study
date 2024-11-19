@@ -21,6 +21,9 @@ for(let item of scores){ // for(String item : stringArr)
 }
 
 //forEach
+//[10, 30, 50 ,40]
+                    // (item, index) => { }
 scores.forEach( (item, index)=>{
     console.log(item + ' ' + index);
 });
+
