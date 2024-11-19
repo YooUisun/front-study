@@ -77,7 +77,7 @@ console.log(getMealByTime(2));  // 금식
 
 
 
-
+//------------------------------연습문제 2024-11-19
 let arr1 = [10, '20', 30];
 let arr2 = [10, '20', 30];
 let arr3 = [10, 20, 30];
@@ -122,9 +122,12 @@ console.log(personInfo);
 // personInfo.engName = "JOHN SMITH";
 // personInfo.nickname = "복습마왕";
 //----------------------------------------------------------------------
-personInfo.phone = personInfo.phone.split("-");
 // personInfo.phone = [personInfo.phone.substring(0,3), personInfo.phone.substring(4,8), personInfo.phone.substring(9,13)];
+//substring 글자 추출 (시작위치, 끝위치(포함xx)) 시작위치 <= 범위 <끝위치
+personInfo.phone = personInfo.phone.split("-");
+//split 매개변수 문자 기준으로 문자열을 잘라서 배열로 반환
 personInfo.engName = personInfo.engName.toUpperCase();
+//toUpperCase 대문자로 변환
 personInfo.nickname = personInfo.nickname.trim();
 //trim 공백제거 함수
 
