@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form01</h1>
+
+    <form action="" method="" id="frm_main">
+        아이디<input type="text" id="input_id" value="myid"> <br/>
+        비번<input type="password" id="input_pw" placeholder="비밀번호 입력"> <br/>
+        <button id="btn_btn" type="button">단순버튼</button>
+        <button id="btn_submit" type="submit">제출(submit역할)</button>
+    </from>
+
+    <img src = "https://media.istockphoto.com/id/656380588/ko/%EC%82%AC%EC%A7%84/%EB%AF%B8%ED%9D%A1%ED%95%A8-%EA%B7%B8%EC%9D%98-%EA%B7%BC%EC%9C%A1%EC%9D%84.jpg?s=1024x1024&w=is&k=20&c=NrgDT70z1uFRsLlPh_pRclbbzRIkhWx62dPOIaMzV-E=" onload = "complt()">
+    <script>
+        const btn_btn= document.querySelector('#btn_btn');
+        const btn_submit = document.querySelector('#btn_submit');
+
+        btn_btn.addEventListener('click', ()=>{ console.log('btn_btn click');});
+        btn_submit.addEventListener('click', ()=>{ console.log('btn_submit click');});
+
+        const frm_main = document.querySelector('#frm_main');
+
+        const input_id =document.getElementById('input_id');
+
+
+
+        //submit 이벤트는 form 에게 설정
+        frm_main.addEventListener('submit', (event)=> { //이벤트 정보 전달
+            console.log(' form submit 이벤트 발생');
+            event.preventDefault(); //기본 발생 이벤트 취소 (submit -> 다른 페이지로 폼 전송 -> 새로고침)
+            //form action="" 작성된 경로로 전송
+            //다른 경로 -> 다른 경로 페이지로 이동
+            //비어있는 값, 동일 페이지 상태 -> 새로고침
+
+            //전송
+            if(input_id.value == ''){
+                alert('아이디 좀 입력해주세요.');
+                return;
+            }
+            //필터링 처리 검증단계.
+
+            //submit 발생 
+            frm_main.submit(); //강제로 submit 발생 시키게 하는거임
+        });
+
+        console.log(document.getElementById('input_id').value);
+        console.log(document.querySelector('#input_pw').value);
+
+        document.querySelector('#input_pw').value='abcde';
+
+
+        input_id.addEventListener('keydown', ()=>{ console.log('keydown 발생');});
+
+        input_id.addEventListener('keypress', ()=>{console.log('keypress 발생');});
+
+        input_id.addEventListener('keyup', ()=>{ console.log('keyup 발생');});
+
+        input_id.addEventListener('focus', ()=> { console.log('focus 됨');})
+        input_id.addEventListener('blur', ()=> { console.log('blur 됨');})
+
+        function complit(){
+            console.log('이미지 로딩');
+        }
+
+        window.onload = ()=> {
+            //브라우저 최상위 객체 window 창 기준으로 모든 페이지정보가 로딩 된 이후 처리 !
+
+            //처리 프로세스 코드
+        }
+    </script>
+</body>
+</html>
