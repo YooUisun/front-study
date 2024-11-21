@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<body>
+<div class="container">
+<div id="main">
+<p id="p1">p1 텍스트</p>
+<p id="p2">p2 텍스트</p>
+</div>
+</div>
+<button onclick="changeMain()">main 배경색 gray로 변경</button>
+<button onclick="changeP1()">p1 글자색 red로 변경</button>
+<button onclick="changeP2()">"p2 텍스트"를 "p2 글자" 로 변경</button>
+
+<button onclick="resetMainBackground()">main 배경색 white 로 다시 변경</button>
+<button onclick="resetP1Color()">p1글자색 black으로 다시 변경</button>
+
+<script>
+    //메인 배경색 그레이로 변경
+    function changeMain(){
+        const main = document.getElementById('main');
+        main.style.backgroundColor = 'gray'
+    }
+    //메인 배경색 화이트로 변경
+    function resetMainBackground(){
+        const main = document.getElementById('main');
+        main.style.backgroundColor = 'white';
+    }
+    //p1글씨 크기 레드로 변경
+    function changeP1(){
+        const p1 = document.getElementById('p1');
+        p1.style.color = 'red';
+    }
+
+    //원상복구 라기 보단 색깔을 다시 바꿔줌
+    function resetP1Color(){
+        const p1 = document.getElementById('p1');
+        p1.style.color = 'black';
+    }
+    //글씨 색깔 다시 바꿔줌
+    function changeP2(){
+        const p2 = document.getElementById('p2');
+        p2.textContent = 'p2 글자';
+    }
+
+
+        // p2 텍스트 버튼을 눌렀을때 순환으로 하나,둘,셋,넷 처럼 돌아감
+        const p2Texts = ['p2 텍스트', 'p2 하나', 'p2 둘', 'p2 셋', 'p2 넷'];
+        let currentIndex = 0; // 현재 인덱스
+
+        function changeP2() {
+            const p2 = document.getElementById('p2');
+            p2.textContent = p2Texts[currentIndex]; // 현재 텍스트 설정
+            currentIndex = (currentIndex + 1) % p2Texts.length; // 다음 인덱스로 이동 (순환)
+        }
+
+</script>
+</body>
+</html>
+
+
+
